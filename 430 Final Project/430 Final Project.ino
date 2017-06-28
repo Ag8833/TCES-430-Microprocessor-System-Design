@@ -1,6 +1,18 @@
-// 430 Final Project
+/*
+ * 430 Final Project
+ * 
+ * This program uses the CC3200 wireless microcontroller along with a servo and an ultrasonic sensor. The servo will
+ * sweep a cone repeatedly until the ultrsonic sensor detects an object within 50 cm. Once it detects an object it 
+ * will sweep in a smaller cone to pseudo track the object it detected. When the object moves away from 50 cm from 
+ * the ultrasonic sensor, the servo will continue it's initial sweeping motion. If the ultrasonic sensor detects an
+ * object closer than 25 cm it will turn on a red LED. If it detects an object between 25 and 50 cm it will turn on a 
+ * yellow LED. Lastly if there are no objects closer than 50 cm a green LED will be turned on.
+ * 
+ * By: Andrew Gates, Brandon Watt, and Vladislav Psarev
+ */
  
 #include <Servo.h> 
+
 Servo myservo;  // create servo object to control a servo a maximum of eight servo objects can be created 
 int pos = 0;    // variable to store the servo position 
 
